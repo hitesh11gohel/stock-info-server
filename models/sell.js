@@ -1,35 +1,36 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const sellSchema = mongoose.Schema({
+const sellSchema = mongoose.Schema(
+  {
     date: {
-        type: Date,
-        required: true,
+      type: Date,
+      required: true,
     },
     userId: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     code: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     quantity: {
-        type: Number,
-        required: true
+      type: Number,
+      required: true,
     },
     price: {
-        type: Number,
-        required: true
+      type: Number,
+      required: true,
     },
     total: {
-        type: Number,
-        required: true
-    }
-},
-    {
-        timestamps: true,
-    }
+      type: Number,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
 );
 
-const SellStock = new mongoose.model('sell', sellSchema);
+const SellStock = new mongoose.model("sell", sellSchema);
 module.exports = SellStock;
